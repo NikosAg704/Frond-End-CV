@@ -6,7 +6,8 @@ It showcases professional information such as *About Me, Career Goals, Education
 ---
 
 ## 🌐 Live Demo
-👉 [View the CV Website](https://NikosAg704.github.io/CV-Frond-End/)
+👉 [View the CV Website](https://nikosag704.github.io/Frond-End-CV/)
+
 
 ---
 
