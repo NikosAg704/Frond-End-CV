@@ -4,34 +4,143 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nikolaos Agiasmenakis - CV</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Lucide Icons (SVG-based) -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --primary:#2563eb;
+      --dark:#1e3a8a;
+      --card-bg:#ffffff;
+    }
+    * { box-sizing:border-box; }
+    body {
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      margin:0;
+      padding:0;
+      background:linear-gradient(135deg,var(--dark),var(--primary));
+      color:#333;
+      -webkit-font-smoothing:antialiased;
+    }
+    header {
+      background:var(--primary);
+      color:#fff;
+      padding:40px 20px;
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    header img {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #fff;
+      margin-bottom:12px;
+      box-shadow:0 6px 16px rgba(0,0,0,0.25);
+    }
+    header h1 { margin:0; font-size:2.2em; }
+    header p { margin:6px 0 0; font-size:1.05em; color:#e2e8f0; }
+
+    .container {
+      max-width:960px;
+      margin:36px auto;
+      padding:28px;
+      background:var(--card-bg);
+      box-shadow:0 12px 30px rgba(2,6,23,0.35);
+      border-radius:14px;
+      animation:fadeInUp .9s ease;
+    }
+    .grid { display:grid; grid-template-columns:1fr 300px; gap:24px; }
+    @media(max-width:860px){ .grid{grid-template-columns:1fr;} .right-col{order:-1;} }
+
+    h2 { font-size:1.05rem; color:var(--dark); margin:0 0 12px; display:flex; align-items:center; gap:10px; }
+    p { color:#0f172a; }
+    ul { padding-left:18px; margin:0; color:#0f172a; }
+    ul li { margin-bottom:8px; }
+
+    .skills { display:flex; flex-wrap:wrap; gap:12px; }
+    .skill {
+      display:flex; flex-direction:column; align-items:center;
+      width:86px; padding:12px; border-radius:10px;
+      background:linear-gradient(180deg,#fbfbff,#f3f7ff);
+      box-shadow:0 6px 18px rgba(37,99,235,0.12);
+      transition:transform .25s;
+    }
+    .skill img { width:36px; height:36px; margin-bottom:8px; }
+    .skill span { font-size:.82rem; color:#0f172a; text-align:center; }
+    .skill:hover { transform:translateY(-6px); }
+
+    .pulse { animation:pulse 2s infinite; }
+    @keyframes pulse { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
+
+    .link-btn {
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px; border-radius:8px;
+      border:1px solid rgba(15,23,42,0.06);
+      background:#fff; font-weight:600;
+      text-decoration:none; color:var(--dark);
+      box-shadow:0 6px 16px rgba(15,23,42,0.06);
+    }
+
+    .card {
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      padding:16px; border-radius:12px;
+      box-shadow:0 8px 20px rgba(2,6,23,0.06);
+    }
+
+    button.primary {
+      margin-top:14px;
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+      display:inline-block;
+    }
+
+    .footer {
+      margin-top:20px;
+      text-align:center;
+      font-style:italic;
+      color:#475569;
+      font-size:1rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(18px); }
+      to { opacity:1; transform:none; }
+    }
+  </style>
 </head>
 <body>
   <header>
+    <img src="fwtw.jpg" alt="Profile photo">
     <h1>Nikolaos Agiasmenakis</h1>
-    <p>Front-End Enthusiast • Based in Athens, Greece</p>
+    <p>Junior Front-End / Full-Stack Enthusiast / Web Developer • Based in Athens, Greece</p>
   </header>
 
   <main class="container">
     <div class="grid">
       <section>
         <h2><i data-lucide="user"></i> About Me</h2>
-        <p>I am a motivated IT student at <b>IEK Akmi</b> focusing on <b>Front-End Development</b>. I learn quickly, enjoy collaborating in teams, and bring strong determination and a professional attitude to every task. I am especially keen on crafting accessible, responsive user interfaces and continuously expanding my skills.</p>
+        <p>I am a motivated IT student at <b>IVT (IEK Akmi)</b> focusing on <b>Front-End Development</b>. I learn quickly, enjoy teamwork, and bring a professional attitude to every task. I am passionate about building accessible, responsive web interfaces and continuously expanding my technical expertise.</p>
 
         <h2><i data-lucide="target"></i> Career Goals</h2>
-        <p>My goal is to begin as a <b>Front-End Developer (Intern/Junior)</b> where I can apply my skills, learn from experienced mentors, and contribute to real-world projects. I aspire to grow into a skilled developer with expertise in React and modern web technologies.</p>
+        <p>My goal is to start as a <b>Front-End Developer / Web Developer</b>, applying my skills in real-world projects while learning from experienced mentors. I aim to grow into a strong Full-Stack Developer skilled in React, Node.js, and modern web technologies.</p>
 
         <h2><i data-lucide="book-open"></i> Education</h2>
-        <p><b>IEK Akmi</b> — Department of Computer Science (Information Technology Student)</p>
+        <p><b>IVT (IEK Akmi)</b> — Department of Computer Science<br>Information Technology Student (Front-End, Back-End & Full-Stack Focus)</p>
 
         <h2><i data-lucide="award"></i> Certifications & Seminars</h2>
         <ul>
-          <li><b>I.SAEK AKMH:</b> Cyber Security & Ethical Hacking</li>
-          <li><b>Cisco Seminar:</b> Cyber Security Masterclass: Building Skills For The Digital Battlefield</li>
-          <li><b>IBM Seminar:</b> Getting Started With Front-End Web Development</li>
-          <li><b>Amazon Web Services Seminar:</b> Getting Started With AWS Generative AI For Developers</li>
+          <li><b>IVT (I.SAEK AKMH):</b> Cyber Security & Ethical Hacking</li>
+          <li><b>Cisco:</b> Cyber Security Masterclass – Building Skills For The Digital Battlefield</li>
+          <li><b>IBM:</b> Getting Started With Front-End Web Development</li>
+          <li><b>AWS:</b> Getting Started With Generative AI For Developers</li>
+          <li><b>ECDL Core Certification:</b> Office & Windows Tools</li>
         </ul>
 
         <h2><i data-lucide="code"></i> Skills</h2>
@@ -39,32 +148,27 @@
           <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
           <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
           <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+          <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
+          <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+          <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
           <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
           <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
-          <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
+          <div class="skill pulse"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress"><span>WordPress</span></div>
         </div>
 
         <h2><i data-lucide="folder-code"></i> Projects / Portfolio</h2>
         <ul>
-          <li><b>Sliders-Project</b> — Interactive image/content sliders built with HTML, CSS and JavaScript. 
-            <a href="https://github.com/NikosAg704/Sliders-Project" target="_blank">View on GitHub</a></li>
-          <li><b>Front-End-CV</b> — Responsive site built with HTML, CSS and JavaScript to showcase projects and CV.
-          <a href="https://github.com/NikosAg704/Frond-End-CV" target="_blank">View on GitHub</a></li>
-          <li><b>To-Do-List-App</b> — Interactive task manager using vanilla JavaScript and LocalStorage.
-          <a href="https://github.com/NikosAg704/My-To-Do-App" target="_blank">View on GitHub</a></li>
-          <li><b>Landing-Page-Design</b> — Modern, mobile-optimized using HTML, CSS and JavaScript to show a landing page demonstrating responsive layouts.
-           <a href="https://github.com/NikosAg704/Landing-Page-Design" target="_blank">View on GitHub</a></li>
-          <li><b>My-chatbot-project </b> — A chatbot project for a computer store, built with Python (Flask) for the backend and HTML, CSS, JavaScript for the frontend. It supports English and Greek languages.
-           <a href="https://github.com/NikosAg704/My-chatbot-project" target="_blank">View on GitHub</a></li>
-          <li><b>CV-in-Python</b> — A console-based portfolio project in Python. It allows you to explore information about me, my skills, interests, projects, and social networks.
-           <a href="https://github.com/NikosAg704/CV-in-Python" target="_blank">View on GitHub</a></li>
+          <li><b>Sliders-Project</b> — Interactive image/content sliders built with HTML, CSS, JS. <a href="https://github.com/NikosAg704/Sliders-Project" target="_blank">View on GitHub</a></li>
+          <li><b>Front-End-CV</b> — Responsive personal portfolio site. <a href="https://github.com/NikosAg704/Frond-End-CV" target="_blank">View on GitHub</a></li>
+          <li><b>To-Do-List-App</b> — Task manager using LocalStorage. <a href="https://github.com/NikosAg704/My-To-Do-App" target="_blank">View on GitHub</a></li>
+          <li><b>Landing-Page-Design</b> — Modern mobile-first layout. <a href="https://github.com/NikosAg704/Landing-Page-Design" target="_blank">View on GitHub</a></li>
+          <li><b>Chatbot Project</b> — Python Flask chatbot supporting English & Greek. <a href="https://github.com/NikosAg704/My-chatbot-project" target="_blank">View on GitHub</a></li>
+          <li><b>CV in Python</b> — Console-based portfolio app. <a href="https://github.com/NikosAg704/CV-in-Python" target="_blank">View on GitHub</a></li>
         </ul>
 
-        <div style="margin-top:14px">
-          <button class="primary" onclick="downloadCV()">Download CV (Print → Save as PDF)</button>
-        </div>
+        <button class="primary" onclick="downloadCV()">Download CV (Print → Save as PDF)</button>
 
-        <div class="footer">“With patience and persistence, you can achieve remarkable things. I approach every task with curiosity, perseverance and a readiness to grow.”</div>
+        <div class="footer">“With patience, curiosity, and persistence, I strive to improve one line of code at a time.”</div>
       </section>
 
       <aside class="right-col">
@@ -80,8 +184,8 @@
           <h2 style="margin-top:18px"><i data-lucide="star"></i> Personal Traits</h2>
           <ul>
             <li>Fast learner and adaptable</li>
-            <li>Hardworking, punctual, and responsible</li>
-            <li>Enjoys teamwork and constructive feedback</li>
+            <li>Organized and responsible</li>
+            <li>Enjoys teamwork & continuous learning</li>
           </ul>
         </div>
       </aside>
@@ -90,7 +194,9 @@
 
   <script>
     lucide.createIcons();
+    function downloadCV() {
+      window.print();
+    }
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
